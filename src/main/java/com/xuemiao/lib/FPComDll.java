@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FPComDll {
     static {
-        System.loadLibrary("FPCom");
+        System.loadLibrary("FPCom_jni");
     }
 
     private native boolean Process(String a, String b);
