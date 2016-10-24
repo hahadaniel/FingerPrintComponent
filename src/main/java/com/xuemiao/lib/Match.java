@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Created by root on 16-10-24.
  */
 @Component
-public interface FPCom extends Library{
-    FPCom Instance = (FPCom) Native.loadLibrary((Platform.isWindows() ? "FPCom" : "c"), FPCom.class);
-    boolean Process(String a, String b);
+public interface Match extends Library{
+    Match Instance = (Match) Native.loadLibrary((Platform.isWindows() ? "Match" : "c"), Match.class);
+    boolean process(String a, String b);
 }
