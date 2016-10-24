@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public interface Match extends Library{
-    Match Instance = (Match) Native.loadLibrary((Platform.isWindows() ? "Match" : "c"), Match.class);
+    Match Instance = (Match) Native.loadLibrary((Platform.isWindows() ? "Match.dll" : "c"), Match.class);
     boolean process(String a, String b);
 }
