@@ -18,13 +18,11 @@ import javax.ws.rs.QueryParam;
 @Component
 @Path("/FPCom")
 public class FPApi {
-    @Autowired
-    FPCom fpCom;
 
     @GET
     @Path("/processing")
     public boolean process(@QueryParam("regStr")String regStr,@QueryParam("logStr")String logStr){
-        return fpCom.Instance.Process(regStr,logStr);
+        return FPCom.Instance.Process(regStr,logStr);
     }
 
 }
