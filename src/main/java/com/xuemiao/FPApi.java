@@ -22,6 +22,7 @@ public class FPApi {
     @GET
     @Path("/processing")
     public boolean process(@QueryParam("regStr")String regStr,@QueryParam("logStr")String logStr){
+        System.out.println("AAA "+regStr);
         return FPCom.Instance.Process(regStr,logStr);
     }
 
