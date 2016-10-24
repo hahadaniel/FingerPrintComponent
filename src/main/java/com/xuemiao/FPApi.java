@@ -1,5 +1,6 @@
 package com.xuemiao;
 
+import com.xuemiao.lib.FPCom;
 import com.xuemiao.lib.FPComDll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,12 +19,12 @@ import javax.ws.rs.QueryParam;
 @Path("/FPCom")
 public class FPApi {
     @Autowired
-    FPComDll fpComDll;
+    FPCom fpCom;
 
     @GET
     @Path("/processing")
     public boolean process(@QueryParam("regStr")String regStr,@QueryParam("logStr")String logStr){
-        return fpComDll.Process_java(regStr,logStr);
+        return fpCom.Instance.Process(regStr,logStr);
     }
 
 }
